@@ -8,7 +8,7 @@ const WeatherCart = ({ weather, temperature }) => {
 
     //first letter of a string with mayus
     function firstLetterMayus(str) {
-        return str.charAt(1).toUpperCase() + str.slice(2);
+        return str.charAt(0).toUpperCase() + str.slice(1);
     }
     //Applying in clouds description
     const clouds = firstLetterMayus(weather?.weather[0].description)
@@ -19,7 +19,7 @@ const WeatherCart = ({ weather, temperature }) => {
             <h2 className='card__subtitle'>{`${weather?.name}, ${weather?.sys.country}`}</h2>
             <h3 className='card__second__title'>-{clouds}-</h3>
             <section className='card__first'>
-                <img className='card__first__img' src={weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="Weather icon" />
+                <img className='card__first__img' src={weather && `https://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="Weather icon" />
             </section>
             <section className='card__second'>
                 <ul className='card__second__list'>
