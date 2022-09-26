@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     if (coords) {
       const APIKEY = '7b72674595e7623555d4ffa570c8e929';
-      const URL = `https://api.openweathermap.org/data/2.5/weather?q=Upington&appid=${APIKEY}`;
+      const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lon}&appid=${APIKEY}`;
 
       axios.get(URL)
         .then(res => {
